@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love ❤️</title>
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffb347);
+color:white;
+text-align:center;
+}
+
+.card{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+padding:40px;
+border-radius:30px;
+width:85%;
+max-width:400px;
+}
+
+button{
+padding:15px 35px;
+border:none;
+border-radius:30px;
+font-size:20px;
+margin:10px;
+cursor:pointer;
+}
+
+#yesPage{display:none;}
+</style>
+</head>
+<body>
+
+<div class="card" id="proposal">
+<h1>Will you be mine forever? ❤️</h1>
+<p>Dawa, every moment with you is special.</p>
+
+<button onclick="yes()">Yes ❤️</button>
+<button id="noBtn">No 😢</button>
+</div>
+
+<div class="card" id="yesPage">
+<h1>Yay! 💖</h1>
+<p>You made me the happiest person alive!</p>
+<h2>I Love You Forever ❤️</h2>
+</div>
+
+<script>
+const noBtn=document.getElementById("noBtn");
+
+noBtn.addEventListener("click",()=>{
+noBtn.style.position="absolute";
+noBtn.style.left=Math.random()*70+"%";
+noBtn.style.top=Math.random()*70+"%";
+});
+
+function yes(){
+document.getElementById("proposal").style.display="none";
+document.getElementById("yesPage").style.display="block";
+}
+</script>
+
+</body>
+</html>
